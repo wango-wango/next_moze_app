@@ -1,0 +1,6 @@
+@import "./variables.scss";
+
+.writing-mode-vertical-lr {
+  writing-mode: vertical-lr;
+  @include letter-spacing(1rem);
+}

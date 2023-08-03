@@ -1,0 +1,6 @@
+$font-color: #ccc;
+$background-color: #2b3b45;
+
+@mixin letter-spacing($space) {
+  letter-spacing: $space;
+}

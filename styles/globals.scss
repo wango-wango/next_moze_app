@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./common.scss";
+
+body {
+  color: $font-color;
+  background: $background-color;
+}
+
