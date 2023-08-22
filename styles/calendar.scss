@@ -1,0 +1,182 @@
+@import "./variables.scss";
+
+%fontStyle {
+  @include rwd($Tablet) {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+  }
+  @include rwd($leptop) {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    margin: 0 1rem;
+  }
+}
+
+/* 修改日期日曆的背景顏色 */
+.MuiDateCalendar-root {
+  margin: 1rem auto;
+  background-color: $slate-700;
+  border-color: $slate-700;
+  border-radius: 5px;
+}
+
+/* 修改日期日曆頭部的文字顏色 */
+.MuiPickersCalendarHeader-root {
+  color: $slate-800;
+  .MuiPickersCalendarHeader-labelContainer,
+  .MuiPickersArrowSwitcher-root {
+    margin: 0;
+  }
+}
+
+/* 修改日期選擇年份樣式 */
+.MuiYearCalendar-root{
+  .MuiPickersYear-yearButton{
+    color: $slate-400;
+      &:hover {
+        background-color: $slate-600;
+      }
+      // 被選中的日子文字樣式
+      &.Mui-selected {
+        background-color: $sky-900;
+        color: $slate-300;
+        &:focus {
+          background-color: $sky-900;
+        }
+        &:hover {
+          background-color: $sky-700;
+        }
+      }
+  }
+}
+// 日曆內部
+.MuiDateCalendar-viewTransitionContainer {
+  
+
+  /* 修改日期日曆中日期的文字顏色 */
+  .MuiPickersDay-root {
+    color: $slate-400;
+    &:hover {
+      background-color: $slate-600;
+    }
+    // 被選中的日子文字樣式
+    &.Mui-selected {
+      background-color: $sky-900;
+      color: $slate-300;
+      &:focus {
+        background-color: $sky-900;
+      }
+      &:hover {
+        background-color: $sky-700;
+      }
+    }
+  }
+}
+
+// 客製化調整尺寸
+.custom-calendar {
+  width: 100%;
+  .MuiDateCalendar-root {
+    width: 100%;
+    max-height: fit-content;
+    @include rwd($mobile) {
+      max-width: 70vw;
+    }
+    @include rwd($Tablet) {
+      min-height: 300px;
+    }
+    @include rwd($leptop) {
+      min-height: 500px;
+    }
+  }
+
+  /* 修改日期日曆頭部的文字顏色 */
+  .MuiPickersCalendarHeader-root {
+    color: $slate-800;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 6rem;
+    @include rwd($Tablet) {
+      gap: 8rem;
+    }
+    @include rwd($leptop) {
+      gap: 18rem;
+    }
+    .MuiPickersCalendarHeader-labelContainer,
+    .MuiPickersArrowSwitcher-root {
+      margin: 0;
+      .MuiIconButton-root {
+        @include rwd($leptop) {
+          font-size: 1.6rem;
+        }
+      }
+      @include rwd($leptop) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  // 日曆內部
+  .MuiDateCalendar-viewTransitionContainer {
+    // 星期(Header)
+    .MuiDayCalendar-header {
+      .MuiDayCalendar-weekDayLabel {
+        @extend %fontStyle;
+      }
+    }
+    // 日期 (Content)
+    .MuiPickersSlideTransition-root {
+      @include rwd($Tablet) {
+        min-height: 300px;
+      }
+      @include rwd($leptop) {
+        min-height: 400px;
+      }
+    }
+    // 每一列的間距
+    .MuiDayCalendar-weekContainer {
+      @include rwd($Tablet) {
+        margin: 0.5rem 0;
+      }
+      @include rwd($leptop) {
+        margin: 1rem 0;
+      }
+    }
+
+    /* 修改日期日曆中日期的文字顏色 */
+    .MuiPickersDay-root {
+      @extend %fontStyle;
+      color: $slate-400;
+      &:hover {
+        background-color: $slate-800;
+      }
+      // 今天的日期
+      &.MuiPickersDay-today {
+        @include rwd($Tablet) {
+          font-size: 1.2rem;
+        }
+        @include rwd($leptop) {
+          font-size: 1.6rem;
+        }
+      }
+      // 被選中的日子文字樣式
+      &.Mui-selected {
+        background-color: $sky-900;
+        color: $slate-300;
+        &:focus {
+          background-color: $sky-900;
+        }
+        &:hover {
+          background-color: $sky-700;
+        }
+      }
+    }
+  }
+
+  /* 修改日期日曆中日期之間的間距 */
+  .MuiDayCalendar-weekContainer {
+    margin-bottom: 5px;
+  }
+}
