@@ -2,7 +2,7 @@
   {
     "id": 1,
     "date": "1692028800000",
-    "icon": "icon1",
+    "icon": "food",
     "title": "title1",
     "cost": 100,
     "accountType": "type1"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "date": "1692028800000",
-    "icon": "icon2",
+    "icon": "food",
     "title": "title2",
     "cost": 200,
     "accountType": "type2"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "date": "1692460800000",
-    "icon": "icon3",
+    "icon": "health",
     "title": "title3",
     "cost": 300,
     "accountType": "type3"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "date": "1692460800000",
-    "icon": "icon1",
+    "icon": "health",
     "title": "title4",
     "cost": 400,
     "accountType": "type1"
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "date": "1692201600000",
-    "icon": "icon2",
+    "icon": "life",
     "title": "title5",
     "cost": 500,
     "accountType": "type2"
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "date": "1692201600000",
-    "icon": "icon3",
+    "icon": "shopping",
     "title": "title6",
     "cost": 600,
     "accountType": "type3"
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "date": "1693324800000",
-    "icon": "icon1",
+    "icon": "family",
     "title": "title7",
     "cost": 700,
     "accountType": "type1"
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "date": "1693324800000",
-    "icon": "icon2",
+    "icon": "family",
     "title": "title8",
     "cost": 800,
     "accountType": "type2"
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "date": "1692374400000",
-    "icon": "icon3",
+    "icon": "family",
     "title": "title9",
     "cost": 900,
     "accountType": "type3"
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "date": "1692374400000",
-    "icon": "icon1",
+    "icon": "food",
     "title": "title10",
     "cost": 1000,
     "accountType": "type1"
