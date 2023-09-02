@@ -2,19 +2,24 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export interface DailyData {
   id: number;
-  date: Date;
+  date: string;
   icon: string;
   title: string;
   cost: number;
   accountType: string;
 }
 
-const initialState: DailyData[] = [];
+const initialState: Array<DailyData> = [];
 
 const calendarSlice = createSlice({
   name: "accounts",
   initialState: initialState,
   reducers: {
+    init(state, action) {
+      action.payload.forEach((item: DailyData) => {
+        state.push({ ...item });
+      });
+    },
     add(state, action) {
       state.push({
         id: new Date().getTime(),
@@ -46,5 +51,5 @@ const calendarSlice = createSlice({
   },
 });
 
-export const { add, remove, edit } = calendarSlice.actions;
+export const { add, remove, edit, init } = calendarSlice.actions;
 export default calendarSlice.reducer;

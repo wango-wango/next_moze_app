@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface AccountList {
+export interface AccountList {
   id: number;
   text: string;
 }

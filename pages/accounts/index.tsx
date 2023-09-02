@@ -16,12 +16,7 @@ function Accounts() {
     text: "",
   });
   const setData = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let data: Account = {
-      id: "",
-      text: "",
-    };
-
-    data =
+    const data =
       e.target.id === "accountId"
         ? {
             ...accountData,
