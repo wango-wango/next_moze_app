@@ -17,7 +17,7 @@ function ShowDetailComponent({ date }: Props) {
   const calendarStore = useSelector(
     (state: Reducer) => state.calendar
   ) as Array<DailyData>;
-  
+
   const [dayList, setDayList] = useState<Array<DailyData>>([]);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ function ShowDetailComponent({ date }: Props) {
     }, [] as DailyData[]);
 
     setDayList(selected);
-  }, [date]);
+  }, [date, calendarStore]);
 
   if (dayList.length) {
     return (

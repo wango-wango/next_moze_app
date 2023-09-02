@@ -69,7 +69,6 @@ function Icons({ setIcon, iconName }: Props) {
   }, []);
 
   useEffect(() => {
-    console.log(iconName);
     if (iconName) {
       const filterIconList = iconData.filter((item) => item.name == iconName);
       setIconList(filterIconList);

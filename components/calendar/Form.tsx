@@ -19,12 +19,34 @@ const accountOptions = [
   },
 ];
 
-function Form() {
-  const [icon, setIcon] = React.useState("");
-  const [ammount, setAmmount] = React.useState("");
-  const [title, setTitle] = React.useState("");
-  const [account, setAccount] = React.useState("");
-  const [date, setDate] = React.useState<Dayjs | null>(null);
+interface Props {
+  date: Date | null;
+  ammount: string;
+  title: string;
+  account: string;
+  setIcon: React.Dispatch<React.SetStateAction<string>>;
+  setAmmount: React.Dispatch<React.SetStateAction<string>>;
+  setTitle: React.Dispatch<React.SetStateAction<string>>;
+  setAccount: React.Dispatch<React.SetStateAction<string>>;
+  setDate: React.Dispatch<React.SetStateAction<Date | null>>;
+}
+
+function Form({
+  ammount,
+  title,
+  account,
+  date,
+  setIcon,
+  setAmmount,
+  setTitle,
+  setAccount,
+  setDate,
+}: Props) {
+  // const [icon, setIcon] = React.useState("");
+  // const [ammount, setAmmount] = React.useState("");
+  // const [title, setTitle] = React.useState("");
+  // const [account, setAccount] = React.useState("");
+  // const [date, setDate] = React.useState<Date | null>(null);
   return (
     <div>
       <Icons setIcon={setIcon} />

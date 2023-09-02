@@ -5,17 +5,19 @@ import AddIcon from "@mui/icons-material/Add";
 import ShowDetailComponent from "src/components/calendar/ShowDetailComponent";
 import AddDailyDataComponent from "src/components/calendar/AddDailyDataComponent";
 function Calendar() {
-  const [title, setTitle] = React.useState<string>("");
+  const [dialogTitle, setDialogTitle] = React.useState<string>("");
   const [open, setOpen] = React.useState<boolean>(false);
-  const [date, setDate] = React.useState<Date | null>(null);
+  const [calendarDate, setCalendarDate] = React.useState<Date | null>(null);
+  const [mode, setMode] = React.useState("second");
   const clickHandler = () => {
-    setTitle("Add");
+    setDialogTitle("Add");
+    setMode("Add");
     setOpen(true);
   };
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <CalendarComponent setDate={setDate} />
+        <CalendarComponent setDate={setCalendarDate} />
         <Button
           aria-label="add"
           variant="text"
@@ -25,9 +27,17 @@ function Calendar() {
         >
           <AddIcon />
         </Button>
-        <ShowDetailComponent date={date} />
+        <ShowDetailComponent date={calendarDate} />
       </div>
-      <AddDailyDataComponent title={title} open={open} setOpen={setOpen} />
+      <AddDailyDataComponent
+        dialogTitle={dialogTitle}
+        open={open}
+        setOpen={setOpen}
+        calendarDate={calendarDate}
+        setCalendarDate={setCalendarDate}
+        mode={mode}
+        setMode={setMode}
+      />
     </>
   );
 }

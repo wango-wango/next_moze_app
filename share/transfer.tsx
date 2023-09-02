@@ -8,6 +8,6 @@ export const timeStempToDate = (timeStemp: string) => {
 };
 
 // 日期轉成時間戳
-export const DateToTimeStemp = (date: Date) => {
-  return new Date(date).getTime().toString();
+export const DateToTimeStemp = (date: Date | null) => {
+  return new Date(date!).getTime().toString();
 };
