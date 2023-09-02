@@ -12,9 +12,9 @@ function ShowDetailComponent() {
   if (calendarStore.length) {
     return (
       <div>
-        <Typography sx={{ ml: 2, flex: 1 }} variant="h3" component="div">
+        {/* <Typography sx={{ ml: 2, flex: 1 }} variant="h3" component="div">
           Sound
-        </Typography>
+        </Typography> */}
         {calendarStore.map((item: DailyData) => (
           <Box component="div" key={item.id}>
             <h1>{item.title}</h1>
@@ -25,7 +25,7 @@ function ShowDetailComponent() {
       </div>
     );
   } else {
-    return <div>empty</div>;
+    return <div></div>;
   }
 }
 

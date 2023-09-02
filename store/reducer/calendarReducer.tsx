@@ -17,7 +17,9 @@ const calendarSlice = createSlice({
   reducers: {
     init(state, action) {
       action.payload.forEach((item: DailyData) => {
-        state.push({ ...item });
+        if (!state.find((stateItem) => stateItem.id == item.id)) {
+          state.push({ ...item });
+        }
       });
     },
     add(state, action) {
