@@ -1,13 +1,12 @@
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
-import { PickerSelectionState } from "@mui/x-date-pickers/internals";
 
-function CalendarComponent() {
-  const handleChange = (
-    value: any,
-    selectionState: PickerSelectionState | undefined
-  ) => {
+interface Props {
+  setDate: (date: Date | null) => void;
+}
+function CalendarComponent({ setDate }: Props) {
+  const handleChange = (value: Date | null) => {
     console.log(value);
-    console.log(selectionState);
+    setDate(value);
   };
   return (
     <div className="custom-calendar">

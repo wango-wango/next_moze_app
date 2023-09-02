@@ -7,6 +7,7 @@ import AddDailyDataComponent from "src/components/calendar/AddDailyDataComponent
 function Calendar() {
   const [title, setTitle] = React.useState<string>("");
   const [open, setOpen] = React.useState<boolean>(false);
+  const [date, setDate] = React.useState<Date | null>(null);
   const clickHandler = () => {
     setTitle("Add");
     setOpen(true);
@@ -14,7 +15,7 @@ function Calendar() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <CalendarComponent />
+        <CalendarComponent setDate={setDate} />
         <Button
           aria-label="add"
           variant="text"
@@ -24,7 +25,7 @@ function Calendar() {
         >
           <AddIcon />
         </Button>
-        <ShowDetailComponent />
+        <ShowDetailComponent date={date} />
       </div>
       <AddDailyDataComponent title={title} open={open} setOpen={setOpen} />
     </>
